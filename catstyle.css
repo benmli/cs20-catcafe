@@ -120,14 +120,14 @@ h1 {
             top: 100%;
             background-color: #fff;
             left: 0;
-            padding: 20px;
+            padding-block: 20px;
             width: 100vw;
             z-index: 1000;
             display: none;
-            text-align: center; /* Center the dropdown items */
+            align-items: center; /* Center items horizontally */
         }
         .menu-links.show {
-            display: inline-block;
+            display: block;
         }
         .hamburger-menu {
             display: block;
@@ -138,6 +138,7 @@ h1 {
 @media screen and (max-width: 400px){
     .top, .container, .title, .background-image {
         width: 100vw;
+        align-items: center; /* Center items horizontally */
     }
     /* .title {
         padding: 20px;
