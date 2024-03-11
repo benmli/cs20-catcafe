@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="catstyle.css">
     <title>Cat Cafe - Menu</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
-            position: relative; /* Added to ensure footer positioning works */
-            min-height: 100vh; /* Added to ensure footer positioning works */
-            margin: 0;
-            padding: 0;
+            position: relative;
+
         }
         
-        .menu-container {
+        .clipboard {
             position: absolute; 
-            left: 50%; /* Move the container 50% from the left */
-            transform: translateX(-50%); /* Center the container horizontally */
+            left: 50%; 
+            transform: translateX(-50%); 
             display: flex;
             flex-wrap: wrap;
-            justify-content: center; /* Center the items horizontally */
+            justify-content: center; 
             background-color: #8B4513; 
-            border: 2px solid #654321; 
-            padding: 40px 30px 20px; /* Add more padding at the top, less on the sides, and normal padding at the bottom */
+            padding-top: 40px;
+            padding-left: 30px;
+            padding-right:30px;
+            padding-bottom: 20px; 
             border-radius: 10px; 
-            width: 50%; /* Adjust width to make the clipboard thicker */
+            width: 90%; 
             padding-bottom: 10px;
         }
 
-        .menu-paper {
+        .paper {
             width: 100%; 
             height: 100%; 
             background-color: #ffffff; 
-            border-radius: 5px; 
+            border-radius: 10px; 
             padding: 20px; 
             display: flex; 
             flex-wrap: wrap; 
@@ -46,7 +44,7 @@
             border: 2px solid;
             border-radius: 10px; 
             padding: 10px;
-            width: 200px; 
+            width: flex; 
             height: 250px; 
             position: relative;
             display: flex; 
@@ -60,6 +58,7 @@
         .menu-item img {
             display: block;
             margin: 0 auto;
+            width: 100px;
         }
 
         .item-name {
@@ -122,15 +121,15 @@
     
     <div id="content">
         <h1> Our Menu </h1>
-        <div class="menu-container">
+        <div class="clipboard">
             <!-- <div class = "background"> -->
-            <div class="menu-paper">
+            <div class="paper">
                 <table style="width: 100%">
             <tr>
                     <td>
                     <div class="menu-item">
 
-                    <img src="coffee.png" alt="Coffee" width="100px">
+                    <img src="coffee.png">
                     <h3 class="item-name">Coffee</h3>
                     <h3 class="item-price">$1</h3>
                 </div>
@@ -138,7 +137,7 @@
                     <td>
                         <div class="menu-item">
 
-                            <img src="catLatte.png" alt="Latte" width="100px">
+                            <img src="catLatte.png">
                             <h3 class="item-name">Latte</h3>
                             <h3 class="item-price">$2</h3>
                         </div>
@@ -149,7 +148,7 @@
                 <td>
                 <div class="menu-item">
 
-                    <img src="croissant.png" alt="Croissant" width="100px">
+                    <img src="croissant.png">
                     <h3 class="item-name">Cat-ilicious Croissant</h3>
                     <h3 class="item-price">$4</h3>
                 </div>
@@ -157,7 +156,7 @@
             <td>
                 <div class="menu-item">
 
-                    <img src="purrfectPancakes.png" alt="Pancakes" width="100px">
+                    <img src="purrfectPancakes.png">
                     <h3 class="item-name">Purr-fect Pancakes</h3>
                     <h3 class="item-price">$2</h3>
                 </div>
@@ -168,7 +167,7 @@
                 <td>
                 <div class="menu-item">
 
-                    <img src="felineFrittata.png" alt="Frittata" width="100px">
+                    <img src="felineFrittata.png">
                     <h3 class="item-name">Feline Fritatta</h3>
                     <h3 class="item-price">$1</h3>
                 </div>
@@ -177,7 +176,7 @@
             <td>
                 <div class="menu-item">
 
-                <img src="catCookie.png" alt="Cookie" width="100px">
+                <img src="catCookie.png">
                 <h3 class="item-name">Cat Cookie</h3>
                 <h3 class="item-price">$2</h3>
             </div>
@@ -188,7 +187,7 @@
            <td>    
     <div class="menu-item">
 
-                    <img src="macncheese.png" alt="MacnCheese" width="100px">
+                    <img src="macncheese.png">
                     <h3 class="item-name">Meow Mac and Cheese</h3>
                     <h3 class="item-price">$1</h3>
                 </div>
@@ -196,7 +195,7 @@
             <td>
                 <div class="menu-item">
 
-                    <img src="kittyKarrots.png" alt="carrots" width="100px">
+                    <img src="kittyKarrots.png">
                     <h3 class="item-name">Kitty Karrots</h3>
                     <h3 class="item-price">$2</h3>
                 </div>
@@ -207,7 +206,7 @@
     <td>
                 <div class="menu-item">
 
-                    <img src="catCake.png" alt="catCake" width="100px">
+                    <img src="catCake.png">
                     <p class="item-name">Kitty Carrot Cake</p>
                     <p class="item-price">$1</p>
                 </div>
@@ -215,7 +214,7 @@
             <td>
                 <div class="menu-item">
 
-                    <img src="oatMilk.png" alt="OatMilk" width="100px">
+                    <img src="oatMilk.png">
                     <p class="item-name">Oat Milk</p>
                     <p class="item-price">+80 cents</p>
                 </div>
@@ -226,7 +225,7 @@
     <td>
                 <div class="menu-item">
 
-                    <img src="LGBTea.jpg" alt="LGBTea" width="100px">
+                    <img src="LGBTea.jpg">
                     <p class="item-name">LGBTea</p>
                     <p class="item-price">$2</p>
                 </div>
@@ -248,6 +247,7 @@
             });
         });
     </script>
+<div id="footer">2024 Cat Cafe. All Rights RESERVED </div>
 </body>
 
 </html>
