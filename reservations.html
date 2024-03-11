@@ -107,7 +107,6 @@
             $("#email-btn").click(function(e) {
                 var email = $("input[name='email']").val();
                 var name = $("input[name='name']").val();
-                var email = $("input[name='email']").val();
                 if(name == "") {
                     e.preventDefault();
                     $("#nameError").html("Please Enter a Name");
@@ -123,11 +122,8 @@
                 
                 
                 if (email.includes("@" && name !== "")){
-
-                    $(".paragraph").html("");
-                    $("#content").html("<h2>Thanks for booking!</h2>");
-                    // e.currentTarget.submit();
-                    
+                    $(".paragraph").empty(); // Clear the paragraph content
+                $("#content").html("<h2>Thanks for booking!</h2>"); // Show the confirmation message
 
 
                 }
