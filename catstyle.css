@@ -25,16 +25,18 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 body {
     background-color: #b49982;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 #content {
     position: absolute;
     top: 110px;
-    width: 100%;
+    width: 100vh;
 }
 
 #background-image {
