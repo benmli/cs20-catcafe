@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-<link rel="stylesheet" href="style.css">
-<style>
-    #imageContainer {
-        margin-top: 20px;
-    }
-    #displayedImage {
-        max-width: 100%;
-        max-height: 300px;
-    }
-</style>
+<html>
 <head>
     <link rel="stylesheet" href="catstyle.css">
     <header class = "header"></header>
+    <style>
+        #imageContainer {
+            margin-top: 20px;
+        }
+        #displayedImage {
+            max-width: 100%;
+            max-height: 300px;
+        }
+        button[type="submit"] {
+            font-family: Garamond;
+            font-size: 16px;
+            background-color: lightpink;
+        }
+    </style>
 </head>
+
+<body>
 <div id='top'>
     <div class="menu-icon">
         <a href='catmain.html'>
@@ -52,30 +58,31 @@
         <div class="bar"></div>
     </div>
 </div>
+
 <div id = 'content'>
-        
-        <h1>Submit Your Cat Photos!</h1>
-        <form action="#" method="get" enctype="multipart/form-data" id = 'catForm'>
-            <label style = "margin-left: 20px;">Name of your kitty! </label>
-                <input type="text" style = "margin-bottom: 5px;"  id="name" name = "name"/> 
-            </br>
+    <h1>Submit Your Cat Photos!</h1>
+    <form action="#" method="get" enctype="multipart/form-data" id = 'catForm'>
+        <label style = "margin-left: 20px;">Name of your kitty! </label>
+            <input type="text" style = "margin-bottom: 5px;"  id="name" name = "name"/> 
         </br>
-            <label style = "margin-left: 20px;">Picture of Cat!
-                <input type="file" style = "margin-bottom: 5px"name="picture" id ="picture"/>
-            </br>
-            </label>
-            <button type="submit" style = "margin-left: 20px; margin-top: 5px">Post!</button>
-            </form>
-            <div id="imageContainer"></div>
+        </br>
         
-            <script>
-                // array to store the images already on the page
-                const images = [
-                    "emicat.jpg",
-                    "eyecat.jpg",
-                    "snowcat.jpg"
-                ] 
-        
+        <label style = "margin-left: 20px;">Picture of Cat!
+        <input type="file" style = "margin-bottom: 10px"name="picture" id ="picture"/>
+        </br>
+        </label>
+        <button type="submit" style = "margin-left: 20px; margin-top: 5px">Post!</button>
+        </form>
+        <div id="imageContainer"></div>
+    
+        <script>
+            // array to store the images already on the page
+            const images = [
+                "emicat.jpg",
+                "eyecat.jpg",
+                "snowcat.jpg"
+            ] 
+    
             const container = document.getElementById('imageContainer');
              
                 for (let i = 0; i < images.length; i++) {
@@ -85,10 +92,8 @@
                     img.height = 300
                     container.appendChild(img);
                 }
-        
-            </script>
-            <script>
-               document.getElementById('catForm').addEventListener('submit', function (event) {
+
+            document.getElementById('catForm').addEventListener('submit', function (event) {
                     event.preventDefault(); // Prevent the form from submitting normally
             
                     // Get values from form fields
@@ -115,19 +120,17 @@
         
                     }
                 });
-            </script>
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        const hamburgerMenu = document.querySelector('.hamburger-menu');
-                        const menuLinks = document.querySelector('.menu-links');
-                
-                        hamburgerMenu.addEventListener('click', function () {
-                            menuLinks.classList.toggle('show');
-                        });
-                    });
-                </script>
+
+                document.addEventListener('DOMContentLoaded', function () {
+                    const hamburgerMenu = document.querySelector('.hamburger-menu');
+                    const menuLinks = document.querySelector('.menu-links');
             
+                    hamburgerMenu.addEventListener('click', function () {
+                        menuLinks.classList.toggle('show');
+                    });
+                });
+            </script>
 </div>
-</div>
+</body>
 
 </html>  
