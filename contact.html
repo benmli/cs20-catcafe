@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="catstyle.css">
         <title>Cat Cafe - Contact Us</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <style type="text/css">
             #content {
                 margin-right: auto;
@@ -59,6 +60,7 @@
         </div>
     </div>
 
+   
 
     <div id="content">
         <h1> Contact Us <3 </h1>
@@ -85,10 +87,10 @@
             <br/>
             <input type='submit' value='Submit'/>
         </form>
-        <div class="container">
 
+
+        <div class="container">
             <h2>Frequently Asked Questions</h2>
-            
             <ul>
               <li>
                 <strong>Q: Do you allow walk-ins or reservations only?</strong><br>
@@ -108,11 +110,15 @@
               </li>
             </ul>
           </div>
+        
     </div>
 
     
     
     <script>
+         $(document).ready(function(){
+                $('.container').hide().fadeIn('slow');
+            });
         document.addEventListener('DOMContentLoaded', function () {
             const hamburgerMenu = document.querySelector('.hamburger-menu');
             const menuLinks = document.querySelector('.menu-links');
