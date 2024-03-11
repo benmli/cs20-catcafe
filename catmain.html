@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         #content {
+            display: flex;
+            flex-direction: column;
             min-height: 100vh;
             background-repeat: no-repeat;
             background-size: cover;
@@ -19,7 +21,7 @@
             z-index: 10;
             background-color: rgb(255,182,193, 0.92);
             padding: 70px;
-            width: 98vh;
+            max-width: 90%;
             margin: auto;
             font-size: 25px;
             margin-top: 70px;
@@ -35,16 +37,16 @@
         }
 
         /* media query for resizing browser window */
-        @media screen and (max-width: 770px) {
-            .title, a {
-                font-size: 20px;
+        @media screen and (max-width: 800px) {
+            .title {
+                font-size: 18px;
+                padding: 20px;
             }
         }
 
         /* media query for phones */
         @media screen and (max-width: 600px) {
             .title {
-                font-size: 18px;
                 padding: 20px;
             }
             a {
