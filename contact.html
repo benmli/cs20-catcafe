@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="catstyle.css">
+        <title>Cat Cafe - Contact Us</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/css">
+            #content {
+                margin-right: auto;
+                margin-left: auto;
+                text-align: center;
+            }
+        </style>
+
+<body>
+    <!-- Nav Bar -->
+    <div id='top'>
+        <div class="menu-icon">
+            <a href='catmain.html'>
+                <img src='cat-logo.png'>
+            </a>
+        </div>
+
+        <div class="menu-links">
+            <a href="catmain.html" class="nav-button">
+                Home
+            </a>
+            <a href="about.html" class="nav-button">
+                About
+            </a>
+            <a href="meetCats.html" class="nav-button">
+                Meet the Cats!
+            </a> 
+            <a href="reservations.html" class="nav-button">
+                Reservations
+            </a> 
+            <a href="share.html" class="nav-button">
+                Share a Cat
+            </a> 
+            <a href="menu.html" class="nav-button">
+                Menu
+            </a>
+            <a href="contact.html" class="nav-button">
+                Contact
+            </a>
+        </div>
+
+        <!-- Hamburger Icon -->
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+
+    <div id="content">
+        <h1>Contact Us</h1>
+        <form method="get" action="#">  <!-- stay on the same page -->
+            <label>Full Name</label>
+            <br/>
+            
+            <input type="text" placeholder="Enter name here" name="fullname"/>
+            <br/>
+    
+            <label>Email Address</label>
+            <br/>
+    
+            <input type='text' placeholder="Enter email here" name='email'/>
+            <br/>
+    
+            <label>Message</label>
+            <br/>
+    
+            <textarea placeholder="Enter your message here"></textarea>
+            <br/>
+    
+    
+            <input type='submit' value='Submit'/>
+        </form>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const menuLinks = document.querySelector('.menu-links');
+
+            hamburgerMenu.addEventListener('click', function () {
+                menuLinks.classList.toggle('show');
+            });
+        });
+    </script>
+<footer>2024 Cat Cafe. All rights reserved.</footer>
+
+</body>
+
+</html>

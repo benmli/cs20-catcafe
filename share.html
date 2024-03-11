@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<style>
+    /* Optional CSS for styling */
+    #imageContainer {
+        margin-top: 20px;
+    }
+    #displayedImage {
+        max-width: 100%;
+        max-height: 300px;
+    }
+</style>
+<head>
+    <link rel="stylesheet" href="catstyle.css">
+    <header class = "header"></header>
+</head>
+<div id='top'>
+    <div class="menu-icon">
+        <a href='catmain.html'>
+            <img src='cat-logo.png'>
+        </a>
+    </div>
+
+    <div class="menu-links">
+        <a href="catmain.html" class="nav-button">
+            Home
+        </a>
+        <a href="about.html" class="nav-button">
+            About
+        </a>
+        <a href="meetCats.html" class="nav-button">
+            Meet the Cats!
+        </a> 
+        <a href="reservations.html" class="nav-button">
+            Reservations
+        </a> 
+        <a href="share.html" class="nav-button">
+            Share a Cat
+        </a> 
+        <a href="menu.html" class="nav-button">
+            Menu
+        </a>
+        <a href="contact.html" class="nav-button">
+            Contact
+        </a>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</div>
+<div id = 'content'>
+        <!-- <h1>Food Postings</h1> -->
+        
+        <h1>Submit Your Cat Photos!</h1>
+        <form action="#" method="get" enctype="multipart/form-data" id = 'catForm'>
+            <label style = "margin-left: 20px;">Name of your kitty! </label>
+                <input type="text" style = "margin-bottom: 5px;"  id="name" name = "name"/> 
+            </br>
+        </br>
+            <label style = "margin-left: 20px;">Picture of Cat!
+                <input type="file" style = "margin-bottom: 5px"name="picture" id ="picture"/>
+            </br>
+            </label>
+            <button type="submit" style = "margin-top: 5px">Post!</button>
+            </form>
+            <div id="imageContainer"></div>
+        
+            <script>
+                // array to store the images already on the page
+                const images = [
+                    "emicat.jpg",
+                    "eyecat.jpg",
+                    "snowcat.jpg"
+                ] 
+        
+            const container = document.getElementById('imageContainer');
+             
+                for (let i = 0; i < images.length; i++) {
+                    const img = document.createElement('img');
+                    img.src = images[i];
+                    img.width = 300;
+                    img.height = 300
+                    container.appendChild(img);
+                }
+        
+            </script>
+            <script>
+               document.getElementById('catForm').addEventListener('submit', function (event) {
+                    event.preventDefault(); // Prevent the form from submitting normally
+            
+                    // Get values from form fields
+                    var name = document.getElementById('name').value;
+                    // var description = document.getElementById('place').value;
+                    var input = document.getElementById('picture');
+                    
+                    if (input.files.length > 0) {
+                        var file = input.files[0];
+                        var reader = new FileReader();
+                    }
+        
+                    reader.readAsDataURL(file);
+                    reader.onload = function() {
+                        var imageContainer = document.getElementById('imageContainer');
+        
+                        var imgElement = document.createElement('img');
+                        imgElement.width = "300";
+                        imgElement.height = "300";
+                        imgElement.style.marginRight = "30px";
+                         // Set src attribute to the data URL
+                        imgElement.src = reader.result;
+                        // Append the img element to the image container
+                        imageContainer.appendChild(imgElement);
+        
+                    }
+                });
+            </script>
+            
+</div>
+</div>
+<footer>2024 Cat Cafe. All rights reserved.</footer>
+
+</html>  

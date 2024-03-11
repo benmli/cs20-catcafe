@@ -1,0 +1,189 @@
+/* Your existing CSS */
+body {
+    /* font-family: 'meta-serif'; */
+    padding: 0;
+    background-color: white;
+    margin: 0;
+    color: black;
+    font-family: Garamond;
+    margin-bottom: 50px;
+}
+a{
+    font-weight: bold;
+}
+
+#top {
+    background-color: lightpink;
+    height: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 40px;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    background-color: #b49982;
+}
+
+#content {
+    position: absolute;
+    top: 110px;
+    width: 100%;
+}
+
+#background-image {
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("cafe.jpg");
+    opacity: 0.5;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(250, 140, 159);
+    font-size: 25px;
+    padding: 5px 20px;
+    border-radius: 7px;
+    border: 2px solid hotpink;
+    text-align: center;
+    display: inline-block;
+}
+
+.nav-button:hover {
+    color: #000;
+    background-color: #fff0db;
+}
+
+#link-button {
+    text-decoration: none;
+    color: #fff;
+    font-size: 50px;
+    padding: 5px 20px;
+    border-radius: 7px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#link-button:hover {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+    text-shadow: 2px 2px 4px #fff;
+}
+
+.menu-icon {
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+    padding-top: 60px;
+    margin-left: 15px;
+}
+
+.menu-icon img {
+    width: 125px;
+}
+
+.menu-links {
+    margin-right: 15px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    color: purple;
+    text-align: center;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none; /* Initially hide */
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 4px 0;
+}
+.title{
+    text-align: center;
+    
+}
+
+/* Media Query for Small Screens */
+@media screen and (max-width: 768px) {
+    .menu-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff; /* Change the background color as needed */
+        padding: 20px;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000; /* Ensure it appears above other content */
+        display: none; /* Hide menu links initially on small screens */
+    }
+    .menu-links.show {
+        display: block; /* Show menu links when the class 'show' is added */
+    }
+    .hamburger-menu {
+        display: block; /* Show hamburger icon */
+    }
+}
+
+.purrentEvents {
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+.main-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    color: #000;
+    transform: translate(-50%, -50%);
+    font-size: 85px;
+    text-align: center;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    bottom: 0;
+}
+
+/* footer {
+    margin-top: auto;
+    font-family: Verdana, Helvetica;
+    font-weight: 600;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(86, 85, 83);
+    color: #ffffff;
+    opacity: 0.95;
+} */

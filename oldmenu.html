@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="catstyle.css">
+        <title>Cat Cafe - Menu</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/css">
+        #menuBox{
+            padding-top: 400px;
+            left: auto;
+            right: auto;
+            text-align: center;
+        }
+        #menuH{
+            text-align: center;
+        }
+        #menu{
+    
+            list-style-type: none;
+            font-size: 50px;
+            font-family: Georgia;
+            color: hotpink;
+            
+        }
+        body{
+            background-image: url(clipboard.png);
+            background-size: 100%;
+        }
+        
+        </style>
+
+<body>
+    <!-- Nav Bar -->
+    <div id='top'>
+        <div class="menu-icon">
+            <a href='catmain.html'>
+                <img src='cat-logo.png'>
+            </a>
+        </div>
+
+        <div class="menu-links">
+            <a href="catmain.html" class="nav-button">
+                Home
+            </a>
+            <a href="about.html" class="nav-button">
+                About
+            </a>
+            <a href="meetCats.html" class="nav-button">
+                Meet the Cats!
+            </a> 
+            <a href="reservations.html" class="nav-button">
+                Reservations
+            </a>
+            <a href="menu.html" class="nav-button">
+                Menu
+            </a>
+            <a href="houserules.html" class="nav-button">
+                House Rules
+            </a> 
+            <a href="contact.html" class="nav-button">
+                Contact
+            </a>
+        </div>
+
+        <!-- Hamburger Icon -->
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+
+    <div id="menuBox">
+
+        <h2 id="menuHead">Our Menu</h2> 
+        <ul id="menu">
+        <li>Coffee - $1</li>
+        <img id="coffee" src="coffee.png" width="100px">
+        <li>Latte - $2 </li>
+        <li><img id="croissant" src="croissant.png" width="100px">Cat-ilicious Croissant - $4 </li>
+        <li>Cat Cookie - $2</li>
+        <li>Purrfect Pancakes - $10 </li>
+        <li>Feline Frittata - $7 </li>
+        <li>Meow Mac & Cheese _ $10 </li>
+        <li>Kitty Karrots - $5</li>
+        <li>Kitty Carrot Cake - $6</li>
+        <li>Oat Milk - +80 cents</li>
+        <li>LGB Tea -</li>
+        </ul>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const menuLinks = document.querySelector('.menu-links');
+
+            hamburgerMenu.addEventListener('click', function () {
+                menuLinks.classList.toggle('show');
+            });
+        });
+    </script>
+
+</body>
+</html>

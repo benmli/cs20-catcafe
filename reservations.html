@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="catstyle.css">
+    <title>Cat Cafe - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+    body {
+        padding: 0;
+        margin: 0;
+        color: black;
+        text-align:center;
+    }
+    form {
+        display: inline-block;
+    }
+    h1 {
+        color: purple;
+    }
+    .paragraph {
+            margin: 0 auto; /* Center the paragraph horizontally */
+            margin-bottom: 20px;
+            text-align: center;
+            width: 400px;
+            font-family: 'meta-serif';
+        }
+</style>
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <div id='top'>
+        <div class="menu-icon">
+            <a href='catmain.html'>
+                <img src='cat-logo.png'>
+            </a>
+        </div>
+
+        <div class="menu-links">
+            <a href="catmain.html" class="nav-button">
+                Home
+            </a>
+            <a href="about.html" class="nav-button">
+                About
+            </a>
+            <a href="meetCats.html" class="nav-button">
+                Meet the Cats!
+            </a> 
+            <a href="reservations.html" class="nav-button">
+                Reservations
+            </a> 
+            <a href="share.html" class="nav-button">
+                Share a Cat
+            </a> 
+            <a href="menu.html" class="nav-button">
+                Menu
+            </a>
+            <a href="contact.html" class="nav-button">
+                Contact
+            </a>
+        </div>
+
+        <!-- Hamburger Icon -->
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Your existing content -->
+    <div id = 'content'>
+    <h1>Book an Event with Us!</h1>
+    <div class='paragraph'>
+        Looking to host a purr-fect event? Look no further! Whether you're planning a birthday celebration, a book club meeting, or a relaxed gathering with friends, our unique venue offers the ideal setting. Imagine sipping on artisanal coffee or tea surrounded by the gentle purrs of our resident cats, while discussing your favorite novels or simply enjoying the company of our furry friends. With comfortable seating areas and a tranquil atmosphere, our cat cafe provides the perfect backdrop for any occasion. Simply fill out the form below to inquire about booking your event, and let us help you create an unforgettable experience for you and your guests.
+    </div>
+    <form action='#' method='get'>
+        <label>Your Name:</label> <input type="text" name='name' id='the_name'> 
+        <div id='nameError'></div>
+        <label>Date of Event: </label> <input type="date" name='name' id='the_name'> <br/><br/>
+        <label>Email: </label> <input type="text" name='email' id='the_name'> <div id='errorText'></div>
+
+        <label>Party Size: </label> <select name = "size" id = 'the_name'>
+            <option value="five">5</option>
+            <option value="six">6</option>
+            <option value="seven">7</option>
+            <option value="eight">8</option>
+            <option value="nine">9</option>
+            <option value="ten">10</option>
+        </select> 
+        <br/><br/>
+        Describe your event and food you want to be served!!
+        <br/>
+        <textarea id = "area" name="area" rows="10" cols="35"></textarea>
+        <br/>
+        <input type= "submit" value="submit" id = 'email-btn'>
+    </form>
+
+    <script>
+        $(document).ready(function() {
+            $("#email-btn").click(function(e) {
+                var email = $("input[name='email']").val();
+                var name = $("input[name='name']").val();
+                var email = $("input[name='email']").val();
+                if(name == "") {
+                    e.preventDefault();
+                    $("#nameError").html("Please Enter a Name");
+                } else {
+                    $("#nameError").html("");
+                }   
+                if (!email.includes("@")) {
+                    e.preventDefault();
+                    $("#errorText").html("Please Enter a Valid Email");
+                } else {
+                    $("#errorText").html("");
+                }   
+                
+                
+                if (email.includes("@" && name !== "")){
+                    e.currentTarget.submit();
+                    $("#content").empty();
+                    document.getElementById("content").innerHTML = "<h2>Thanks for booking!</h2>";
+
+
+                }
+            });
+
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const menuLinks = document.querySelector('.menu-links');
+
+            hamburgerMenu.addEventListener('click', function () {
+                menuLinks.classList.toggle('show');
+            });
+        });
+    </script>
+    <footer>2024 Cat Cafe. All rights reserved.</footer>
+
+</body>
+</div>
+</html>

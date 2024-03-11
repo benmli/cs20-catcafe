@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="catstyle.css">
+    <title>Cat Cafe - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .title{
+            background-color: rgba(255,182,193,.5);
+            padding: 70px;
+            width: 700px;
+            margin: auto;
+            font-size: 25px;
+            margin-top: 150px;
+            color: #FFFFFF;
+            font-family: Garamond;
+
+        }
+        a{
+
+            color: white;
+            font-size: 25px;
+            font-family: Garamond;
+
+            
+        }
+        a:hover{
+            color: #AA336A;
+
+        }
+    </style>
+</head>
+<body>
+    <div id='top'>
+        <div class="menu-icon">
+            <a href='catmain.html'>
+                <img src='cat-logo.png'>
+            </a>
+        </div>
+
+        <div class="menu-links">
+            <a href="catmain.html" class="nav-button">
+                Home
+            </a>
+            <a href="about.html" class="nav-button">
+                About
+            </a>
+            <a href="meetCats.html" class="nav-button">
+                Meet the Cats!
+            </a> 
+            <a href="reservations.html" class="nav-button">
+                Reservations
+            </a> 
+            <a href="share.html" class="nav-button">
+                Share a Cat
+            </a> 
+            <a href="menu.html" class="nav-button">
+                Menu
+            </a>
+            <a href="contact.html" class="nav-button">
+                Contact
+            </a>
+        </div>
+
+        <!-- Hamburger Icon -->
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <div id='content'>
+        <div id='background-image'></div>
+        <div class="purrentEvents">
+            <div class="title">
+                Welcome to Kitty Kitty Cafe! 
+                Come join us in Medford, Massachusetts for a delicious, relaxing
+                and absolutely cute meal!! 
+            </br>
+            Check out our <a href="menu.html" id="menulink">menu</a> and enjoy a 
+            treat of your choice, </br>
+            then, <a href="meetCats.html" id="meetlink">meet our feline friends!</a>
+            and meet the cats in person! 
+            </br>
+            Excited to see you there!
+            </div>
+            <img src="catwalk.png">
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const menuLinks = document.querySelector('.menu-links');
+
+            hamburgerMenu.addEventListener('click', function () {
+                menuLinks.classList.toggle('show');
+            });
+        });
+    </script>
+        <footer>2024 Cat Cafe. All rights reserved.</footer>
+
+</body>
+</html>
