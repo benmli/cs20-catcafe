@@ -22,15 +22,16 @@
                 font-weight: bold;
                 color: hotpink;
             }
-            .column {
-            float: left;
-            width: 50%;
+            .row {
+            display: flex;
             }
-            .row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+
+            .column {
+            flex: 50%;
+            }
+            .content{
+                margin-top: 300px;
+            }
         </style>
 
 <body>
@@ -74,6 +75,7 @@
             <div class="bar"></div>
         </div>
     </div>
+    <div class="content">
     <h1>Meet our lovely cats!</h1>
         <div class="row">
         <div class="column"><img class="catpic" src="https://i.pinimg.com/736x/16/2e/bf/162ebf3917176c19e604a128ff9b49d3.jpg">
@@ -87,7 +89,6 @@
             <div class="column"> <h3 class="name">Cleo</h3><h3 class="food">Favorite food: Lettuce</h3>
                 <h3 class="personality">Personality: Curious<h3>
                 <h3 class="food">Favorite food: Tuna</h3>
-                <h3 class="personality">Personality: Goofy<h3></div>
             </div>
         <div class="row">
             <div class="column"><img class="catpic" src="Salad.jpeg"></div>
@@ -95,6 +96,7 @@
                 <h3 class="food">Favorite food: Catnip</h3>
                 <h3 class="personality">Personality: Cheeky<h3></div>
             </div>
+        </div>
     
         
         
@@ -112,6 +114,8 @@
             });
         });
     </script>
+
+
     <footer>2024 Cat Cafe. All rights reserved.</footer>
 
 </body>
