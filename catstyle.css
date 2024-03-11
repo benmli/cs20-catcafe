@@ -6,7 +6,8 @@ body {
     margin: 0;
     color: black;
     font-family: Garamond;
-    margin-bottom: 50px;
+    margin-bottom: 50px
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 a{
     font-weight: bold;
