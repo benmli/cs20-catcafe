@@ -30,6 +30,17 @@
         margin-bottom: 20px;
         background-color: rgb(245, 232, 234);
         }
+        .footer {
+            position: fixed;
+            padding: 10px 10px 0px 10px;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+                text-align: center;
+        }
 </style>
 </head>
 <body>
@@ -81,7 +92,7 @@
         Looking to host a purr-fect event? Look no further! Whether you're planning a birthday celebration, a book club meeting, or a relaxed gathering with friends, our unique venue offers the ideal setting. Imagine sipping on artisanal coffee or tea surrounded by the gentle purrs of our resident cats, while discussing your favorite novels or simply enjoying the company of our furry friends. With comfortable seating areas and a tranquil atmosphere, our cat cafe provides the perfect backdrop for any occasion. Simply fill out the form below to inquire about booking your event, and let us help you create an unforgettable experience for you and your guests.
     </div>
     <form action='#' method='get'>
-        <label>Your Name:</label> <input type="text" name='name' id='the_name'> 
+        <label style = "margin-bottom: 5px">Your Name:</label> <input type="text" name='name' id='the_name'> 
         <div id='nameError'></div>
         <label>Date of Event: </label> <input type="date" name='name' id='the_name'> <br/><br/>
         <label>Email: </label> <input type="text" name='email' id='the_name'> <div id='errorText'></div>
@@ -141,7 +152,8 @@
         });
     </script>
 
-</body>
 </div>
-<footer>2024 Cat Cafe. All rights reserved.</footer>
+<!-- <div class='footer'>2024 Cat Cafe. All Rights Reserved. </div> -->
+</body>
+
 </html>

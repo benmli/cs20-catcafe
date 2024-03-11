@@ -97,28 +97,55 @@
     </div>
     <div class="content">
     <h1>Meet our lovely cats!</h1>
-        <div class="row">
+        <div class="row" id='1';>
         <div class="column"><img class="catpic" src="https://i.pinimg.com/736x/16/2e/bf/162ebf3917176c19e604a128ff9b49d3.jpg">
         </div>
-        <div class="column2"><h2 class="name">Git</h2>
-            <h3 class="food">Favorite food: Tuna</h3>
-            <h3 class="personality">Personality: Goofy<h3></div>
+        <div class="column2"><h2 class="name"></h2>
+            <div id="cato"></div>
         </div>
-        <div class="row">
+        <div class="row" id="2">
             <div class="column"><img class="catpic" src="EmiCat.jpeg"></div>
-            <div class="column2"> <h2 class="name">Cleo</h2><h3 class="food">Favorite food: Bread</h3>
-                <h3 class="personality">Personality: Curious<h3>
-            </div>
+            <div id="cat1"></div>
         </div>
-        <div class="row">
+        <div class="row" id="3">
             <div class="column"><img class="catpic" src="Salad.jpeg"></div>
-            <div class="column2"><h2 class="name">Salad</h2>
-                <h3 class="food">Favorite food: Catnip</h3>
-                <h3 class="personality">Personality: Cheeky<h3></div>
+            <div id="cat2"></div>
         </div>
     </div>
     
     <script>
+            let qualities= [{
+                name: "Git",
+                food: "Tuna",
+                personality:"Goofy",
+            },
+            {
+                name: "Cleo",
+                food: "Bread",
+                personality: "Curious",
+
+            },
+            {
+                name: "Salad",
+                food: "Catnip",
+                personality: "Cheeky",
+
+            }]
+            for(var i= 0; i < 3; i++){
+                var idName = "cat" + i;
+                document.getElementById(idName).innerHTML = 
+                "Name: " + qualities[i].name + "</br>" + 
+                "Favourite Food: " + qualities[i].food + "</br>" + 
+                "Personality: " + qualities[i].personality + "</br>"; 
+
+            }
+
+        
+
+
+        // Associative Array to store cat qualities 
+
+
         document.addEventListener('DOMContentLoaded', function () {
             const hamburgerMenu = document.querySelector('.hamburger-menu');
             const menuLinks = document.querySelector('.menu-links');
