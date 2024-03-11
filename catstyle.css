@@ -80,7 +80,7 @@ a {
 .menu-icon {
     display: inline-block;
     vertical-align: top;
-    float: left;
+    /* float: left; */
     padding-top: 25px;
     margin-left: 15px;
 }
