@@ -1,5 +1,7 @@
 /* Your existing CSS */
 body {
+    display: flex;
+    flex-direction: column;
     width: 100vh;
     padding: 0;
     background-color: #b49982;
