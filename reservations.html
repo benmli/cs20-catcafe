@@ -98,11 +98,12 @@
     </div>
     <form action='#' method='get'>
         <label style = "margin-bottom: 5px">Your Name:</label> <input type="text" name='name' id='the_name'> 
-    </br> </br>
-        <div id='nameError'></div>
+    </br> <div id='nameError'></div> </br>
+        
 
         <label>Date of Event: </label> <input type="date" name='date' id='the_name'> <br/><br/>
         <label>Email: </label> <input type="text" name='email' id='email'> <div id='errorText'></div>
+    </br>
 
         <label>Party Size: </label> <select name = "size" id = 'size'>
             <option value="five">5</option>
@@ -117,7 +118,7 @@
         <br/>
         <textarea id = "area" name="area" rows="10" cols="35"></textarea>
         <br/>
-        <input type= "submit" value="submit" id = 'email-btn'>
+        <input type= "submit" value="Submit" id = 'email-btn'>
     </form>
 
     <script>
@@ -128,12 +129,14 @@
                 if(name == "") {
                     e.preventDefault();
                     $("#nameError").html("Please Enter a Name");
+                    $("#nameError").css("color", "rgb(184, 24, 32)");
                 } else {
                     $("#nameError").html("");
                 }   
                 if (!email.includes("@")) {
                     e.preventDefault();
                     $("#errorText").html("Please Enter a Valid Email");
+                    $("#errorText").css("color", "rgb(184, 24, 32)");
                 } else {
                     $("#errorText").html("");
                 }   
@@ -159,7 +162,7 @@
     </script>
 
 </div>
-<!-- <div class='footer'>2024 Cat Cafe. All Rights Reserved. </div> -->
+
 </body>
 
 </html>
