@@ -130,6 +130,7 @@ h1 {
     .menu-links {
         position: absolute;
         top: 100%;
+        background-color: #fff;
         left: 0;
         padding: 20px;
         width: 100vw;
@@ -143,7 +144,9 @@ h1 {
         display: block; 
         padding: 10px;
     }
+}
 
+@media screen and (max-width: 400px){
     .top, .container, .title, .background-image {
         width: 100vw;
     }
