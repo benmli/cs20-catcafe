@@ -124,6 +124,7 @@ h1 {
             width: 100vw;
             z-index: 1000;
             display: none;
+            overflow-y: auto;
         }
         .menu-links.show {
             display: flex; /* Use flexbox for layout */
