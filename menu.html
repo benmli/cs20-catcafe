@@ -34,38 +34,28 @@
             background-color: #ffffff; 
             border-radius: 5px; 
             padding: 20px; 
-            box-sizing: border-box; 
-            display: flex; /* Enable flexbox layout */
-            flex-wrap: wrap; /* Enable wrapping of items */
-            justify-content: center; /* Center items horizontally */
-            align-items: center; /* Center items vertically */
-            position: relative; /* Position for absolute children */
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center;
+            align-items: center; 
+            position: relative; 
         }
 
         .menu-item {
-            flex: 0 0 calc(50% - 20px); /* Adjust width to fit two items in a row */
-            margin: 10px; /* Add margin for spacing */
-            border: 2px solid; /* Adjust border thickness */
-            border-radius: 10px; /* Add rounded corners */
-            padding: 10px; /* Add some padding for spacing */
-            box-sizing: border-box; /* Include padding and border in the width calculation */
-            width: 200px; /* Set fixed width for each menu item */
-            height: 250px; /* Set fixed height for each menu item */
-            position: relative; /* Position for absolute children */
-            display: flex; /* Enable flexbox layout */
-            flex-direction: column; /* Align content vertically */
-            align-items: center; /* Center the content horizontally */
-            justify-content: center; /* Center the content vertically */
+            margin: auto;
+            border: 2px solid;
+            border-radius: 10px; 
+            padding: 10px;
+            width: 200px; 
+            height: 250px; 
+            position: relative;
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
         }
 
-        .pushpin {
-            font-size: 24px; /* Adjust size of the pushpin */
-            color: #CD5C5C; /* Adjust color of the pushpin */
-            position: absolute; /* Position the pushpin relative to the menu item */
-            top: -10px; /* Adjust vertical position */
-            left: 50%; /* Center horizontally */
-            transform: translateX(-50%); /* Center horizontally */
-        }
+       
 
         .menu-item img {
             display: block;
@@ -82,20 +72,11 @@
             color: #555;
         }
 
-        /* Media query for mobile responsiveness */
-        @media screen and (max-width: 768px) {
-            .menu-item {
-                flex-basis: calc(100% - 20px); /* Change to full width on smaller screens */
-            }
+     
+        td{
+            margin: auto;
         }
-        /* .footer{
-            text-align: center;
-            bottom: 0;
-            left: 0;
-            right:0;
-            padding: 20px;
-            color: black;
-        } */
+
     </style>
 </head>
 <body>
@@ -144,72 +125,115 @@
         <div class="menu-container">
             <!-- <div class = "background"> -->
             <div class="menu-paper">
-                <div class="menu-item">
+                <table style="width: 100%">
+            <tr>
+                    <td>
+                    <div class="menu-item">
 
                     <img src="coffee.png" alt="Coffee" width="100px">
-                    <p class="item-name">Coffee</p>
-                    <p class="item-price">$1</p>
+                    <h3 class="item-name">Coffee</h3>
+                    <h3 class="item-price">$1</h3>
                 </div>
-                <div class="menu-item">
+                    </td>
+                    <td>
+                        <div class="menu-item">
 
-                    <img src="catLatte.png" alt="Latte" width="100px">
-                    <p class="item-name">Latte</p>
-                    <p class="item-price">$2</p>
-                </div>
+                            <img src="catLatte.png" alt="Latte" width="100px">
+                            <h3 class="item-name">Latte</h3>
+                            <h3 class="item-price">$2</h3>
+                        </div>
+                    </td>
+                
+            </tr>
+            <tr>
+                <td>
                 <div class="menu-item">
 
                     <img src="croissant.png" alt="Croissant" width="100px">
-                    <p class="item-name">Cat-ilicious Croissant</p>
-                    <p class="item-price">$4</p>
+                    <h3 class="item-name">Cat-ilicious Croissant</h3>
+                    <h3 class="item-price">$4</h3>
                 </div>
+            </td>
+            <td>
                 <div class="menu-item">
 
                     <img src="purrfectPancakes.png" alt="Pancakes" width="100px">
-                    <p class="item-name">Purr-fect Pancakes</p>
-                    <p class="item-price">$2</p>
+                    <h3 class="item-name">Purr-fect Pancakes</h3>
+                    <h3 class="item-price">$2</h3>
                 </div>
+            </td>
+            </tr>
+            
+            <tr>
+                <td>
                 <div class="menu-item">
 
                     <img src="felineFrittata.png" alt="Frittata" width="100px">
-                    <p class="item-name">Feline Fritatta</p>
-                    <p class="item-price">$1</p>
+                    <h3 class="item-name">Feline Fritatta</h3>
+                    <h3 class="item-price">$1</h3>
                 </div>
+            </td>
+
+            <td>
                 <div class="menu-item">
 
-                    <img src="catCookie.png" alt="Cookie" width="100px">
-                    <p class="item-name">Cat Cookie</p>
-                    <p class="item-price">$2</p>
-                </div>
-                <div class="menu-item">
+                <img src="catCookie.png" alt="Cookie" width="100px">
+                <h3 class="item-name">Cat Cookie</h3>
+                <h3 class="item-price">$2</h3>
+            </div>
+        </td>
+            </tr>
+            
+<tr>
+           <td>    
+    <div class="menu-item">
 
                     <img src="macncheese.png" alt="MacnCheese" width="100px">
-                    <p class="item-name">Meow Mac and Cheese</p>
-                    <p class="item-price">$1</p>
+                    <h3 class="item-name">Meow Mac and Cheese</h3>
+                    <h3 class="item-price">$1</h3>
                 </div>
+            </td>
+            <td>
                 <div class="menu-item">
 
                     <img src="kittyKarrots.png" alt="carrots" width="100px">
-                    <p class="item-name">Kitty Karrots</p>
-                    <p class="item-price">$2</p>
+                    <h3 class="item-name">Kitty Karrots</h3>
+                    <h3 class="item-price">$2</h3>
                 </div>
+            </td>
+            </tr>
+
+<tr>
+    <td>
                 <div class="menu-item">
 
                     <img src="catCake.png" alt="catCake" width="100px">
                     <p class="item-name">Kitty Carrot Cake</p>
                     <p class="item-price">$1</p>
                 </div>
+            </td>
+            <td>
                 <div class="menu-item">
 
                     <img src="oatMilk.png" alt="OatMilk" width="100px">
                     <p class="item-name">Oat Milk</p>
                     <p class="item-price">+80 cents</p>
                 </div>
+            </td>
+            </tr>
+
+<tr>
+    <td>
                 <div class="menu-item">
 
                     <img src="LGBTea.jpg" alt="LGBTea" width="100px">
                     <p class="item-name">LGBTea</p>
                     <p class="item-price">$2</p>
                 </div>
+            </tr>
+        </td>
+
+            </table>
             </div>
         </div>
     </div>
@@ -224,7 +248,6 @@
             });
         });
     </script>
-<div id="footer">2024 Cat Cafe. All Rights RESERVED </div>
 </body>
 
 </html>
