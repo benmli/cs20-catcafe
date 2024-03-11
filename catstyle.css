@@ -165,7 +165,7 @@ h1 {
     font-size: 85px;
     text-align: center;
 }
-
+/* 
 footer {
     position: absolute;
     bottom: 0;
@@ -175,8 +175,17 @@ footer {
     text-align: center;
     padding: 20px;
     width: 100%;
-}
+} */
 
+/* .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+} */
 /* footer {
     margin-top: auto;
     background-color: #333;
