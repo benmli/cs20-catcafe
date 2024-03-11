@@ -33,6 +33,7 @@
 </style>
 </head>
 <body>
+
     <!-- Navigation bar -->
     <div id='top'>
         <div class="menu-icon">
@@ -71,15 +72,14 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-
+    </div>
 
     <!-- Your existing content -->
-    <div id = "content">
+    <div id = 'content'>
     <h1 class="bookTitle">Book an Event with Us!</h1>
     <div class='paragraph'>
         Looking to host a purr-fect event? Look no further! Whether you're planning a birthday celebration, a book club meeting, or a relaxed gathering with friends, our unique venue offers the ideal setting. Imagine sipping on artisanal coffee or tea surrounded by the gentle purrs of our resident cats, while discussing your favorite novels or simply enjoying the company of our furry friends. With comfortable seating areas and a tranquil atmosphere, our cat cafe provides the perfect backdrop for any occasion. Simply fill out the form below to inquire about booking your event, and let us help you create an unforgettable experience for you and your guests.
     </div>
-</div>
     <form action='#' method='get'>
         <label>Your Name:</label> <input type="text" name='name' id='the_name'> 
         <div id='nameError'></div>
@@ -99,9 +99,9 @@
         <br/>
         <textarea id = "area" name="area" rows="10" cols="35"></textarea>
         <br/>
-        <input type= "submit" value="Submit" id = 'email-btn'>
+        <input type= "submit" value="submit" id = 'email-btn'>
     </form>
-</div>
+
     <script>
         $(document).ready(function() {
             $("#email-btn").click(function(e) {
@@ -140,7 +140,8 @@
             });
         });
     </script>
- </div>
+
 </body>
-<div id="footer">2024 Cat Cafe. All Rights RESER </div>
+</div>
+<footer>2024 Cat Cafe. All rights reserved.</footer>
 </html>
