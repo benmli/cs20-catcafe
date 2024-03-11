@@ -122,8 +122,7 @@
                 
                 
                 if (email.includes("@" && name !== "")){
-                    $(".paragraph").empty(); // Clear the paragraph content
-                $("#content").html("<h2>Thanks for booking!</h2>"); // Show the confirmation message
+                    e.currentTarget.submit();
 
 
                 }
