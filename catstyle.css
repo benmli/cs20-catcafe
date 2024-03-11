@@ -124,41 +124,29 @@ h1 {
     text-align: center;
 } */
 
-/* Media Query for Small Screens */
+/* make responsive for smaller screens */
 /* @media screen and (max-width: 768px) { */
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1250px){
     .menu-links {
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: #fff; /* Change the background color as needed */
         padding: 20px;
         width: 100vw;
-        z-index: 1000; /* Ensure it appears above other content */
-        display: none; /* Hide menu links initially on small screens */
+        z-index: 1000;
+        display: none;
     }
     .menu-links.show {
-        display: block; /* Show menu links when the class 'show' is added */
+        display: block;
     }
     .hamburger-menu {
-        display: block; /* Show hamburger icon */
+        display: block; 
         padding: 10px;
     }
-    /* body {
-        font-size: 12px;
-    } */
-    img {
-        display: block;
-        margin: 0 auto;
-        max-width: 100%; /* Ensure images don't exceed container width */
-        height: auto; /* Maintain aspect ratio */
-    }
 
-    /* Center other content */
-    .container {
-        text-align: center;
+    .top, .container, .title, .background-image {
+        width: 100vw;
     }
-
     /* .title {
         padding: 20px;
         font-size: 18px;
