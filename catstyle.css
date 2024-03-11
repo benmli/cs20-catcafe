@@ -6,8 +6,8 @@ body {
     margin: 0;
     color: black;
     font-family: Garamond;
-    /* margin-bottom: 50px; */
-}
+    /* margin-bottom: 50px;
+} */
 a{
     font-weight: bold;
 }
@@ -29,7 +29,8 @@ a{
 #content {
     position: absolute;
     top: 110px;
-    width: 100vh;
+    display: flex;
+    flex-direction: row;
 }
 
 #background-image {
@@ -101,7 +102,7 @@ a{
 }
 
 h1 {
-    color: purple;
+    color: purpl;
     text-align: center;
 }
 
