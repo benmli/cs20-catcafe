@@ -92,12 +92,12 @@
         </div>
     </div>
     <script>
-        /* JQuery animation (fade) */
+        // JQuery fade animation (fade)
         $(document).ready(function(){
             $('.paragraph').hide().fadeIn('slow');
         });
     </script>
-    <!-- Your existing content -->
+
     <div id = 'content'>
     <h1>Book an Event with Us!</h1>
     <div class='paragraph'>
@@ -133,6 +133,7 @@
             $("#email-btn").click(function(e) {
                 var email = $("input[name='email']").val();
                 var name = $("input[name='name']").val();
+                var date = $("input[name='date']").val();
                 if(name == "") {
                     e.preventDefault();
                     $("#nameError").html("Please Enter a Name");
@@ -146,15 +147,8 @@
                     $("#errorText").css("color", "rgb(184, 24, 32)");
                 } else {
                     $("#errorText").html("");
-                }   
-                
-                
-                if (email.includes("@" && name !== "")){
-                    e.currentTarget.submit();
-
                 }
             });
-
         });
     </script>
     <script>

@@ -91,54 +91,51 @@
         </div>
     
         <div class="column2"><h2 class="name"></h2>
-            <div class="description" id="cat0"></div>
+            <div class="description" id="cat0">&nbsp;</div>
         </div>
     </div>
         <div class="row" id="2">
             <div class="column"><img class="catpic" src="EmiCat.jpeg"></div>
             <div class="column2">
-            <div class="description" id="cat1"></div>
+            <div class="description" id="cat1">&nbsp;</div>
         </div>
     </div>
         <div class="row" id="3">
             <div class="column"><img class="catpic" src="Salad.jpeg"></div>
             <div class="column2">
-            <div class="description" id="cat2"></div>
+            <div class="description" id="cat2">&nbsp;</div>
         </div>
     </div>
     
     <script>
-            let qualities= [{
-                name: "Git",
-                food: "Tuna",
-                personality:"Goofy",
-            },
-            {
-                name: "Cleo",
-                food: "Bread",
-                personality: "Curious",
+        // associative array to store cat info
+        let cats = [];
+        cats["cat0"] = {
+            name: "Git",
+            food: "Tuna",
+            personality:"Goofy",
+        };
+        cats["cat1"] = {
+            name: "Cleo",
+            food: "Bread",
+            personality: "Curious",
+        };
+        cats["cat2"] = {
+            name: "Salad",
+            food: "Catnip",
+            personality: "Cheeky",
+        };
 
-            },
-            {
-                name: "Salad",
-                food: "Catnip",
-                personality: "Cheeky",
-
-            }]
-            for(var i= 0; i < 3; i++){
-                let idName = "cat" + i;
-                document.getElementById(idName).innerHTML =
-                "Name: " + qualities[i].name + "</br>" + 
-                "Favourite Food: " + qualities[i].food + "</br>" + 
-                "Personality: " + qualities[i].personality + "</br>"; 
-
-            }
-
-        
-
-
-        // Associative Array to store cat qualities 
-
+        // loop through cats array to display corresponding info
+        let i = 0;
+        for (cat in cats) {
+            let idName = "cat" + i;
+            i++;
+            document.getElementById(idName).innerHTML =
+            "Name: " + cats[cat]['name'] + "</br>" + 
+            "Favourite Food: " + cats[cat]['food'] + "</br>" + 
+            "Personality: " + cats[cat]['personality'] + "</br>"; 
+        }
 
         document.addEventListener('DOMContentLoaded', function () {
             const hamburgerMenu = document.querySelector('.hamburger-menu');
@@ -149,10 +146,6 @@
             });
         });
     </script>
-    <!-- <div id="footer">2024 Cat Cafe. All Rights RESERVED </div> -->
 </body>
 
-
 </html>
-
-<!-- dog Wet Food -->
