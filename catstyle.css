@@ -144,20 +144,10 @@ h1 {
 }
 
 @media screen and (max-width: 400px){
-    #top, .container, .title, .background-image {
+    #top, .container { /*, .title, .background-image {*/
         width: 100vw;
-        align-items: center; /* Center items horizontally */
+        align-items: center;
     }
-    /* .title {
-        padding: 20px;
-        font-size: 18px;
-    }
-    .purrentEvents {
-        padding: 20px;
-    }
-    .main-text {
-        font-size: 16px;
-    } */
 }
 
 .main-text {
