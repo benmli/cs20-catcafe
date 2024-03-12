@@ -111,39 +111,37 @@ h1 {
     background-color: #000;
     margin: 4px 0;
 }
-/* .title{
-    text-align: center;
-} */
 
-/* make responsive for smaller screens */
-/* @media screen and (max-width: 768px) { */
-    @media screen and (max-width: 1250px) {
-        .menu-links {
-            position: absolute;
-            top: 100%;
-            background-color: #fff;
-            left: 0;
-            padding-top: 10px;
-            width: 100vw;
-            z-index: 1000;
-            display: none;
-        }
-        .menu-links.show {
-            display: flex; /* Use flexbox for layout */
-            flex-direction: column; /* Arrange items vertically */
-            align-items: center;
-            padding-bottom: 10px; /* Add padding to the bottom */
-        }
-        .menu-links.show a {
-            padding: 15px; /* Add padding to the bottom */
-            width: 70vw;
-            margin-bottom: 10px;
-        }
-        .hamburger-menu {
-            display: block;
-            padding: 10px;
-        }
+@media screen and (max-width: 1250px) {
+    .menu-links {
+        position: absolute;
+        top: 100%;
+        background-color: #fff;
+        left: 0;
+        padding-top: 10px;
+        width: 100vw;
+        max-height: 300px;
+        overflow-y: auto;
+        display: none;
     }
+    
+    .menu-links.show {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+        padding-bottom: 10px; 
+    }
+
+    .menu-links.show a {
+        padding: 15px; 
+        width: 70vw;
+        margin-bottom: 10px;
+    }
+    .hamburger-menu {
+        display: block;
+        padding: 10px;
+    }
+}
 
 @media screen and (max-width: 400px){
     #top, .container, .title, .background-image {
